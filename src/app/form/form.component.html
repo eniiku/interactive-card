@@ -1,28 +1,59 @@
-<form>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="card-holder">cardholder name</label>
-    <input id="card-holder" type="text" placeholder="e.g. Jane Appleseed" />
+    <input
+      id="card-holder"
+      type="text"
+      placeholder="e.g. Jane Appleseed"
+      [(ngModel)]="formDetails.name"
+      name="name"
+      required
+    />
   </div>
   <div>
     <label for="card-number">card name</label>
     <input
       id="card-number"
-      type="number"
+      type="text"
       placeholder="e.g. 1234 5678 9123 0000"
+      [(ngModel)]="formDetails.number"
+      name="number"
+      required
     />
   </div>
   <div>
     <div>
       <label for="card-date">exp.date (mm/yy)</label>
       <div>
-        <input id="card-date" type="number" placeholder="MM" />
-        <input id="card-date" type="number" placeholder="YY" />
+        <input
+          id="card-date"
+          type="text"
+          placeholder="MM"
+          [(ngModel)]="formDetails.date.month"
+          name="month"
+          required
+        />
+        <input
+          id="card-date"
+          type="text"
+          placeholder="YY"
+          [(ngModel)]="formDetails.date.year"
+          name="year"
+          required
+        />
       </div>
     </div>
     <div>
       <label for="card-holder">cvc</label>
-      <input id="card-holder" type="text" placeholder="e.g. 123" />
+      <input
+        id="card-holder"
+        type="text"
+        placeholder="e.g. 123"
+        [(ngModel)]="formDetails.cvc"
+        name="cvc"
+        required
+      />
     </div>
   </div>
-  <button type="submit">confirm</button>
+  <button type="submit" [disabled]="!form.form.valid">confirm</button>
 </form>

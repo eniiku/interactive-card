@@ -9,13 +9,20 @@ import { Form } from '../form';
 export class FormComponent implements OnInit {
   formDetails: Form = {
     name: '',
-    number: 0,
-    cvc: 0,
+    number: '',
+    cvc: '',
     date: {
-      month: 0,
-      year: 0,
+      month: '',
+      year: '',
     },
   };
+
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

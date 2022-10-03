@@ -1,9 +1,9 @@
 export interface Form {
   name: string;
-  number: number;
-  cvc: number;
+  number: string;
+  cvc: string;
   date: {
-    month: number;
-    year: number;
+    month: string;
+    year: string;
   };
 }
