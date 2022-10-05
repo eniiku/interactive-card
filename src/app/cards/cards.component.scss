@@ -1,0 +1,29 @@
+section {
+  width: 100%;
+  height: 35%;
+
+  background: url(../../assets/images/bg-main-mobile.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  img {
+    width: 75%;
+  }
+
+  .card--back {
+    z-index: 5;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+  }
+
+  .card--front {
+    z-index: 15;
+    position: absolute;
+    left: 10px;
+    bottom: -37.5px;
+  }
+}
