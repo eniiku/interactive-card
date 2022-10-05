@@ -2,6 +2,7 @@ form {
   background: inherit;
   padding: 2rem 1rem;
   max-width: 420px;
+  margin-top: 5rem;
 
   label {
     text-transform: uppercase;
@@ -12,10 +13,12 @@ form {
 
   input {
     width: 100%;
-    padding: 0.4rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
 
     border: 1px solid #ddd;
     border-radius: 8px;
+    margin-top: 0.3rem;
     margin-bottom: 0.65rem;
 
     &::placeholder {
@@ -40,13 +43,15 @@ form {
   button {
     width: 100%;
     margin-top: 1rem;
-    padding: 0.65rem 0;
+    padding: 0.8rem 0;
 
     border-radius: 8px;
     border: none;
 
     text-transform: capitalize;
+
     font-weight: "500";
+    font-size: 0.9rem;
 
     background: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
